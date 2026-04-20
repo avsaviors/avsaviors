@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Basic metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.05">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Page info -->
+    <title>AV Saviors</title>
+    <meta name="description" content="Grand Junction's local specialists for any IT needs!">
+
+    <style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(135deg, #8a8f84 0%, #d5c4b3 100%);
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 70px; /* offset for sticky navbar */
+}
+
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(15px) saturate(160%);
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffe082;
+  transform: scale(1.1);
+}
+
+
+main.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+h1, h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+input,
+textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.02);
+}
+
+button {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  main.container {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+  .hero {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* HERO TEXT */
+.hero-text {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-shadow: 0px 0px 10px black;
+}
+
+/* NAVBAR NOW ON IMAGE */
+nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: .75rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  backdrop-filter: blur(12px) saturate(140%);
+  background: rgba(0,0,0,0.30);
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .5px;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  color: #ffe082;
+  transform: scale(1.12);
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  nav ul {
+    gap: 1rem;
+  }
+  .hero-img {
+    height: 45vh;
+  }
+}
+
+}
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+
+  <header class="hero">
+    <img src="your-image.jpg" alt="Hero" class="hero-img">
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </img>
+    <div class="hero-text">
+      <h1>AV Saviors</h1>
+      <p>Grand Junction's local specialists for IT help!</p>
+    </div>
+  </header>
+
+      <div id="about">
+        <h2>About us:</h2>
+        <p>Beginning as just a few friends around a card table, 
+          our team has developed into a trusted local group. 
+          We've created a strong bond of trust and friendship 
+          within our team and are excited to tackle any IT needs! <br><br></p>
+          <img id="" src=""></img>
+      </div>
+      
+      <div id="projects">
+        <h2>Projects:</h2>
+        <h3>Home projector and sound system</h3>
+        <p>When deciding on a meeting place for the team, we settled on one of our garages. 
+          In order to create a more effective meeting environment within this storage space, 
+          we cleaned a central area, set up a meeting space with the utmost feng shui, and 
+          wired and mounted a projector, monitor, and left-over speaker system for our own meetings.</p>
+        <img id="" src=""></img>
+        <p>Now we can plan most effectively for any new projects! <br><br></p>
+      </div>
+      
+      <div id="contact">
+        <h2>Contact us!</h2>
+        <form>
+        <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+        <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Type message here..." rows="2" required></textarea>
+        <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </main>
+
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Message sent! 🎉");
+      });
+    </script>
+  </body>
+</html>
+
